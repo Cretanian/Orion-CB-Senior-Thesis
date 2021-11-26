@@ -1,0 +1,40 @@
+{
+    "id": "urn:ngsi-ld:Building:001",
+    "type": "Building",
+    "address": {
+        "type": "PostalAddress",
+        "value": {
+            "streetAddress": "Nikolaou Plastira ITE",
+            "addressRegion": "Greece",
+            "addressLocality": "Heraklion/Crete",
+            "postalCode": "71500"
+        }
+    },
+    "category": {
+        "value": ["office"]
+    },
+    "name": {
+        "value": "Blah Blah Blah Blah"
+    },
+    "description": {
+        "value": "Blah Blah Blah Blah"
+    },
+    "openingHours": {
+        "value": ["Mo-Fr 10:00-19:00", "Sa 10:00-22:00", "Su 10:00-21:00"]
+    },
+    "location": {
+        "type": "geo:json",
+        "value": {
+             "type": "Polygon",
+             "coordinates":[
+                [
+                    [35.30489070759817, 25.07212132094572],
+                    [35.30509501689339, 25.072462710424574],
+                    [35.30538290638819, 25.07221615135651],
+                    [35.30517395443743, 25.071852002579064],
+                    [35.30489070759817, 25.07212132094572]
+                ]
+             ]
+        }
+    }
+}

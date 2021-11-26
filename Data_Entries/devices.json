@@ -1,0 +1,1494 @@
+{
+  "actionType":"APPEND",
+  "entities":[
+    {
+      "id": "urn:ngsi-ld:Device:001", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [0, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:002", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:002"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [2.25, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:003", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:003"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [4.50, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:004", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:004"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [6.75, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:005", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:005"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:006", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:006"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [11.25, 0]
+        }
+      }
+    },
+    {
+        "id": "urn:ngsi-ld:Device:007", 
+        "type": "Device",
+        "category": {
+          "value": ["sensor"]
+        },
+        "occupancy": {
+          "type": "Integer",
+          "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+        },
+        "refRoom": {
+          "type": "Relationship", 
+          "value": "urn:ngsi-ld:Room:007"
+        },
+        "location": {
+          "type": "2D:Area", 
+          "value": { 
+              "type": "point",
+              "coordinates": [0, 5]
+          }
+        }
+      },
+    {
+      "id": "urn:ngsi-ld:Device:008", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:008"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [0, 6.20]
+        }
+      }
+    },    
+    {
+      "id": "urn:ngsi-ld:Device:009", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:009"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [13.50, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:010", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:010"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [15.75, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:011", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:011"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [18, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:012", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:012"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [20.25, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:013", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:013"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [22.50, 0]
+        }
+      }
+    },
+    {
+        "id": "urn:ngsi-ld:Device:014", 
+        "type": "Device",
+        "category": {
+          "value": ["sensor"]
+        },
+        "occupancy": {
+          "type": "Integer",
+          "value": 0,
+            "metadata": {
+                "dateModified":{
+                    "type": "DateTime",
+                    "value": "2018-05-25T10:51:32"
+                }
+            }
+        },
+        "refRoom": {
+          "type": "Relationship", 
+          "value": "urn:ngsi-ld:Room:014"
+        },
+        "location": {
+          "type": "2D:Area", 
+          "value": { 
+              "type": "point",
+              "coordinates": [13.50, 5]
+          }
+        }
+      },
+
+    {
+      "id": "urn:ngsi-ld:Device:015", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+       "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:015"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [24.75, 0]
+        }
+      }
+    },
+
+
+    {
+      "id": "urn:ngsi-ld:Device:016", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:016"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [27, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:017", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:017"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [29.25, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:018", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:018"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [31.50, 0]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:019", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:019"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [33.75, 0]
+        }
+      }
+    },
+    {
+        "id": "urn:ngsi-ld:Device:020", 
+        "type": "Device",
+        "category": {
+          "value": ["sensor"]
+        },
+        "occupancy": {
+          "type": "Integer",
+          "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+        },
+        "refRoom": {
+          "type": "Relationship", 
+          "value": "urn:ngsi-ld:Room:020"
+        },
+        "location": {
+          "type": "2D:Area", 
+          "value": { 
+              "type": "point",
+              "coordinates": [24.75, 5]
+          }
+        }
+      },
+
+    {
+      "id": "urn:ngsi-ld:Device:021", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:029"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 13.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:049", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:030"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 15.50]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:022", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:031"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 17.75]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:023", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:032"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 20]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:024", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:033"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 22.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:025", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:034"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [13.50, 13.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:026", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:035"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [24.75, 13.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:027", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:036"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates":  [24.75, 15.50]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:028", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:037"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [24.75, 17.75]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:029", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:038"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [24.75, 20]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:030", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:039"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [24.75, 22.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:031", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:040"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [31.50, 13.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:032", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:041"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [31.50, 15.50]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:033", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:042"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates":  [31.50, 17.75]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:034", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:043"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [31.50, 20]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:035", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:044"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [31.50, 22.25]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:036", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:045"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [0, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:037", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:046"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [2.25, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:038", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:047"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [4.50, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:039", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:048"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [6.75, 33.70]
+        }
+      }
+    }
+    ,
+    {
+      "id": "urn:ngsi-ld:Device:040", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:049"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [9, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:041", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:050"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [11.25, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:042", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:051"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [13.50, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:043", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:052"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [15.75, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:044", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:053"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [18, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:045", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:054"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [20.25, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:046", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:055"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [22.50, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:047", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:056"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [24.75, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:048", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:058"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [27, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:049", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:059"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [29.25, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:050", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:060"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [31.50, 33.70]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Device:051", 
+      "type": "Device",
+      "category": {
+        "value": ["sensor"]
+      },
+      "occupancy": {
+        "type": "Integer",
+        "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+      },
+      "refRoom": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Room:061"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "point",
+            "coordinates": [33.75, 33.70]
+        }
+      }      
+    },
+    {
+        "id": "urn:ngsi-ld:Device:052", 
+        "type": "Device",
+        "category": {
+          "value": ["sensor"]
+        },
+        "occupancy": {
+          "type": "Integer",
+          "value": 0,
+        "metadata": {
+            "dateModified":{
+                "type": "DateTime",
+                "value": "2018-05-25T10:51:32"
+            }
+        }
+        },
+        "refRoom": {
+          "type": "Relationship", 
+          "value": "urn:ngsi-ld:Room:062"
+        },
+        "location": {
+          "type": "2D:Area", 
+          "value": { 
+              "type": "point",
+              "coordinates": [33.75, 33.70]
+          }
+        }      
+      }
+  ]
+}

@@ -1,0 +1,2014 @@
+{
+  "actionType":"APPEND",
+  "entities":[
+//----------------------------------- G170 - G177      
+    {
+      "id": "urn:ngsi-ld:Room:001", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G176"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 0],
+                    [2.25, 0],
+                    [2.25, 5],
+                    [0, 5],
+                    [0, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:002", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G175"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [2.25, 0],
+                    [4.50, 0],
+                    [4.50, 5],
+                    [2.25, 5],
+                    [2.25, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:003", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G174"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [4.50, 0],
+                    [6.75, 0],
+                    [6.75, 5],
+                    [4.50, 5],
+                    [4.50, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:004", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G173"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [6.75, 0],
+                    [9, 0],
+                    [9, 5],
+                    [6.75, 5],
+                    [6.75, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:005", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G172"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 0],
+                    [11.25, 0],
+                    [11.25, 5],
+                    [9, 5],
+                    [9, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:006", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G171"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [11.25, 0],
+                    [13.50, 0],
+                    [13.50, 5],
+                    [11.25, 5],
+                    [11.25, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:007", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Lab G170"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "lab"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 5],
+                    [13.50, 5],
+                    [13.50, 11.10],
+                    [4.5, 11.10],
+                    [4.5, 6.20],
+                    [0, 6.20],
+                    [0, 5]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:009", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G177"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 6.20],
+                    [4.5, 6.20],
+                    [4.5,11.10],
+                    [0, 11.10],
+                    [0, 6.20]
+            ]
+        }
+      }
+    },
+//----------------------------------- G160 - G165
+    {
+      "id": "urn:ngsi-ld:Room:010", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G165"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [13.50, 0],
+                    [15.75, 0],
+                    [15.75, 5],
+                    [13.50, 5],
+                    [13.50, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:011", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G164"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [15.75, 0],
+                    [18, 0],
+                    [18, 5],
+                    [15.75, 5],
+                    [15.75, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:012", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G163"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [18, 0],
+                    [20.25, 0],
+                    [20.25, 5],
+                    [18, 5],
+                    [18, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:013", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G162"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [20.25, 0],
+                    [22.50, 0],
+                    [22.50, 5],
+                    [20.25, 5],
+                    [20.25, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:014", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G161"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [22.50, 0],
+                    [24.75, 0],
+                    [24.75, 5],
+                    [22.50, 5],
+                    [22.50, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:015", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Lab G160"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "lab"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [13.50, 5],
+                    [24.75, 5],
+                    [24.75, 11.10],
+                    [13.50, 11.10],
+                    [13.50, 5]
+            ]
+        }
+      }
+    },
+//----------------------------------- G150 - G155
+    {
+      "id": "urn:ngsi-ld:Room:016", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G155"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 0],
+                    [27, 0],
+                    [27, 5],
+                    [24.75, 5],
+                    [24.75, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:017", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G154"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [27, 0],
+                    [29.25, 0],
+                    [29.25, 5],
+                    [27, 5],
+                    [27, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:018", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G153"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [29.25, 0],
+                    [31.50, 0],
+                    [31.50, 5],
+                    [29.25, 5],
+                    [29.25, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:019", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G152"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 0],
+                    [33.75, 0],
+                    [33.75, 5],
+                    [31.50, 5],
+                    [31.50, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:020", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G151"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [33.75, 0],
+                    [36, 0],
+                    [36, 5],
+                    [33.75, 5],
+                    [33.75, 0]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:021", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Lab G150"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "lab"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 5],
+                    [36, 5],
+                    [36, 9.70],
+                    [31.50, 9.70],
+                    [31.50, 11.10],
+                    [24.75, 11.10],
+                    [24.75, 5]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:022", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Bathroom G156"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "bathroom"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 9.70],
+                    [36, 9.70],
+                    [36, 11.40],
+                    [31.50, 11.40],
+                    [31.50, 9.70]
+            ]
+        }
+      }
+    },
+//----------------------------------- routes
+    {
+      "id": "urn:ngsi-ld:Room:023", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "South Route"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "route"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 11.10],
+                    [31.50, 11.10],
+                    [31.50, 11.40],
+                    [36, 11.40],
+                    [36, 13.25],
+                    [0, 13.25],
+                    [0, 11.10]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:024", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "East Route"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "route"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [29.25, 13.25],
+                    [31.50, 13.25],
+                    [31.50, 25.45],
+                    [29.25, 25.45],
+                    [29.25, 13.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:023", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "West Route"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "route"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [7.75, 13.25],
+                    [9, 13.25],
+                    [9, 25.45],
+                    [7.75, 25.45],
+                    [7.75, 13.25]
+            ]
+        }
+      }
+    },
+   
+    {
+      "id": "urn:ngsi-ld:Room:023", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "North Route"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "route"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 25.45],
+                    [36, 25.45],
+                    [36, 27.30],
+                    [31.50, 27.30],
+                    [31.50, 27.60],
+                    [0, 27.60],
+                    [0, 25.45]
+            ]
+        }
+      }
+    },
+//----------------------------------- middle 
+    {
+      "id": "urn:ngsi-ld:Room:025", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Middle West Meeting Room"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "meeting room"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [-1.05, 13.25],
+                    [3.75, 13.25],
+                    [3.75, 18.10],
+                    [-1.05, 18.10],
+                    [-1.05, 13.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:026", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Middle South Bathroom"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "bathroom"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [3.75, 13.25],
+                    [6.25, 13.25],
+                    [6.25, 18.10],
+                    [3.75, 18.10],
+                    [3.75, 13.25]
+
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:028", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Middle North kitchen"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "kitchen"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 18.10],
+                    [6.25, 18.10],
+                    [6.25, 20.60],
+                    [3.75, 20.60],
+                    [3.75, 25.45],
+                    [-1.05, 25.45],
+                    [-1.05, 20.60],
+                    [0, 20.60],
+                    [0, 18.10]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:066", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Middle North Bathroom"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "bathroom"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [3.75, 20.60],
+                    [6.25, 20.60],
+                    [6.25, 25.45],
+                    [3.75, 25.45],
+                    [3.75, 20.60]
+
+            ]
+        }
+      }
+    },
+//----------------------------------- G102 - G106
+    {
+      "id": "urn:ngsi-ld:Room:029", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G106"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 13.25],
+                    [13.50, 13.25],
+                    [13.50, 15.50],
+                    [9, 15.50],
+                    [9, 13.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:030", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G105"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 15.50],
+                    [13.50, 15.50],
+                    [13.50, 17.75],
+                    [9, 17.75],
+                    [9, 15.50]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:031", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G104"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 17.75],
+                    [13.50, 17.75],
+                    [13.50, 20],
+                    [9, 20],
+                    [9, 17.75]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:032", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G103"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 20],
+                    [13.50, 20],
+                    [13.50, 22.25],
+                    [9, 22.25],
+                    [9, 20]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:033", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G102"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 22.25],
+                    [13.50, 22.25],
+                    [13.50, 25.45],
+                    [9, 25.45],
+                    [9, 22.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:034", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "middle skylight"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "skylight"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [13.50, 13.25],
+                    [24.75, 13.25],
+                    [24.75, 25.45],
+                    [13.50, 25.45],
+                    [13.50, 13.25]
+            ]
+        }
+      }
+    },
+//----------------------------------- G140 - G149
+    {
+      "id": "urn:ngsi-ld:Room:035", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G148"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 13.25],
+                    [29.25, 13.25],
+                    [29.25, 15.50],
+                    [24.75, 15.50],
+                    [24.75, 13.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:036", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G146"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 15.50],
+                    [29.25, 15.50],
+                    [29.25, 17.75],
+                    [24.75, 17.75],
+                    [24.75, 15.50]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:037", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G144"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 17.75],
+                    [29.25, 17.75],
+                    [29.25, 20],
+                    [24.75, 20],
+                    [24.75, 17.75]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:038", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G142"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 20],
+                    [29.25, 20],
+                    [29.25, 22.25],
+                    [24.75, 22.25],
+                    [24.75, 20]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:039", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G140"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 22.25],
+                    [29.25, 22.25],
+                    [29.25, 25.45],
+                    [24.75, 25.45],
+                    [24.75, 22.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:040", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G149"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 13.25],
+                    [36, 13.25],
+                    [36, 15.50],
+                    [31.50, 15.50],
+                    [31.50, 13.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:041", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G147"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 15.50],
+                    [36, 15.50],
+                    [36, 17.75],
+                    [31.50, 17.75],
+                    [31.50, 15.50]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:042", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G145"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 17.75],
+                    [36, 17.75],
+                    [36, 20],
+                    [31.50, 20],
+                    [31.50, 17.75]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:043", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G143"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 20],
+                    [36, 20],
+                    [36, 22.25],
+                    [31.50, 22.25],
+                    [31.50, 20]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:044", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G141"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 22.25],
+                    [36, 22.25],
+                    [36, 25.45],
+                    [31.50, 25.45],
+                    [31.50, 22.25]
+            ]
+        }
+      }
+    },
+//----------------------------------- G110 - G116
+    {
+      "id": "urn:ngsi-ld:Room:045", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G111"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 33.70],
+                    [2.25, 33.70],
+                    [2.25, 38.70],
+                    [0, 38.70],
+                    [0, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:046", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G112"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [2.25, 33.70],
+                    [4.50, 33.70],
+                    [4.50, 38.70],
+                    [2.25, 38.70],
+                    [2.25, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:047", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G113"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [4.50, 33.70],
+                    [6.75, 33.70],
+                    [6.75, 38.70],
+                    [4.50, 38.70],
+                    [4.50, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:048", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G114"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [6.75, 33.70],
+                    [9, 33.70],
+                    [9, 38.70],
+                    [6.75, 38.70],
+                    [6.75, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:049", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G115"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [9, 33.70],
+                    [11.25, 33.70],
+                    [11.25, 38.70],
+                    [9, 38.70],
+                    [9, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:050", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G116"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [11.25, 33.70],
+                    [13.50, 33.70],
+                    [13.50, 38.70],
+                    [11.25, 38.70],
+                    [11.25, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:051", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Lab G110"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "lab"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 27.60],
+                    [13.50, 27.60],
+                    [13.50, 33.70],
+                    [0, 33.70],
+                    [0, 27.60]
+            ]
+        }
+      }
+    },
+//----------------------------------- G120 - G126
+    {
+      "id": "urn:ngsi-ld:Room:051", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G121"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [13.50, 33.70],
+                    [15.75, 33.70],
+                    [15.75, 38.70],
+                    [13.50, 38.70],
+                    [13.50, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:052", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G122"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [15.75, 33.70],
+                    [18, 33.70],
+                    [18, 38.70],
+                    [15.75, 38.70],
+                    [15.75, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:053", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G123"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [18, 33.70],
+                    [20.25, 33.70],
+                    [20.25, 38.70],
+                    [18, 38.70],
+                    [18, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:054", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G124"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [20.25, 33.70],
+                    [22.50, 33.70],
+                    [22.50, 38.70],
+                    [20.25, 38.70],
+                    [20.25, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:055", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G125"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [22.50, 33.70],
+                    [24.75, 33.70],
+                    [24.75, 38.70],
+                    [22.50, 38.70],
+                    [22.50, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:056", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G126"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [24.75, 33.70],
+                    [27, 33.70],
+                    [27, 38.70],
+                    [24.75, 38.70],
+                    [24.75, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:057", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Lab G120"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "lab"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [13.50, 27.60],
+                    [27, 27.60],
+                    [27, 33.70],
+                    [13.50, 33.70],
+                    [13.50, 27.60]
+            ]
+        }
+      }
+    },
+//----------------------------------- G130 - G134
+    {
+      "id": "urn:ngsi-ld:Room:058", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G151"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [27, 33.70],
+                    [29.25, 33.70],
+                    [29.25, 38.70],
+                    [27, 38.70],
+                    [27, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:059", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G132"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [29.25, 33.70],
+                    [31.50, 33.70],
+                    [31.50, 38.70],
+                    [29.25, 38.70],
+                    [29.25, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:060", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G133"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 33.70],
+                    [33.75, 33.70],
+                    [33.75, 38.70],
+                    [31.50, 38.70],
+                    [31.50, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:061", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Office G134"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "office"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [33.75, 33.70],
+                    [36, 33.70],
+                    [36, 38.70],
+                    [33.75, 38.70],
+                    [33.75, 33.70]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:062", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Lab G130"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "lab"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [27, 27.75],
+                    [31.50, 27.75],
+                    [31.50, 29],
+                    [36, 29],
+                    [36, 33.70],
+                    [27, 33.70],
+                    [27, 27.75]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:063", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Bathroom G135"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "bathroom"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [31.50, 27.30],
+                    [36, 27.30],
+                    [36, 29],
+                    [31.50, 29],
+                    [31.50, 27.30]
+            ]
+        }
+      }
+    },
+//----------------------------------- stairs
+    {
+      "id": "urn:ngsi-ld:Room:027", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Inside Stairs"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "Stairs"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [6.25, 13.25],
+                    [7.75, 13.25],
+                    [7.75, 25.45],
+                    [6.25, 25.45],
+                    [6.25, 13.25]
+            ]
+        }
+      }
+    },
+    {
+      "id": "urn:ngsi-ld:Room:064", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Outside Stairs"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "Stairs"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [36, 0],
+                    [40.80, 0],
+                    [40.80, 10],
+                    [42.20, 10],
+                    [42.20, 13.50],
+                    [39.20, 13.50],
+                    [36, 27.70],
+                    [36, 0]
+            ]
+        }
+      }
+    },
+//----------------------------------- stairs
+    {
+      "id": "urn:ngsi-ld:Room:065", 
+      "type": "Room",
+      "name":{
+        "type": "Text", 
+        "value": "Front Entrense"
+      },
+      "roomType": {
+        "type": "Relationship", 
+        "value": "Entrense"
+      },
+      "refFloor": {
+        "type": "Relationship", 
+        "value": "urn:ngsi-ld:Floor:001"
+      },
+      "location": {
+        "type": "2D:Area", 
+        "value": { 
+            "type": "Polygon",
+            "coordinates": [
+                    [0, 38.70],
+                    [35.55, 38.70],
+                    [35.55, 41.15],
+                    [19.50, 41.15],
+                    [19.50, 46.15],
+                    [17.10, 46.15],
+                    [17.10, 41.15],
+                    [1.05, 41.15],
+                    [1.05, 38.70],
+                    [0, 38.70]
+            ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "actionType":"APPEND",
+  "entities":[
+    {
+      "id":"urn:ngsi-ld:Zone:000", 
+      "type":"Zone",
+      "refFloor": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Floor:001"
+        },
+       "refBuilding": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Building:001"
+        },
+      "name": {
+        "value": "TNL"
+        },
+      "location": {
+        "type": "2D:Area",
+        "value": {
+             "type": "Polygon",
+             "coordinates":[
+                [
+                   [0, 0],
+                   [13.50, 0],
+                   [13.50, 11.10],
+                   [0, 11.10],
+                   [0, 0]
+                ]
+             ]
+        }
+        }
+    },
+    {
+      "id":"urn:ngsi-ld:Zone:001", 
+      "type":"Zone",
+      "refFloor": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Floor:001"
+        },
+       "refBuilding": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Building:001"
+        },
+      "name": {
+        "value": "ISL"
+        },
+      "location": {
+        "type": "2D:Area",
+        "value": {
+             "type": "Polygon",
+             "coordinates":[
+                [
+                   [13.50, 0], 
+                   [24.75, 0],
+                   [24.75, 11.10],
+                   [13.50, 11.10],
+                   [13.50, 0]
+                ]
+             ]
+        }
+        }
+    },
+    {
+      "id":"urn:ngsi-ld:Zone:002", 
+      "type":"Zone",
+      "refFloor": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Floor:001"
+        },
+       "refBuilding": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Building:001"
+        },
+      "name": {
+        "value": "ISL CCI"
+        },
+      "location": {
+        "type": "2D:Area",
+        "value": {
+             "type": "Polygon",
+             "coordinates":[
+                [
+                   [24.75, 0],
+                   [36, 0],
+                   [36, 9.70],
+                   [31.50, 9.70],
+                   [31.50, 11.10],
+                   [24.75, 11.10],
+                   [24.75, 0]
+                ]
+             ]
+        }
+        }
+    },
+    {
+      "id":"urn:ngsi-ld:Zone:003", 
+      "type":"Zone",
+      "refFloor": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Floor:001"
+        },
+       "refBuilding": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Building:001"
+        },
+      "name": {
+        "value": "HCI"
+        },
+      "location": {
+        "type": "2D:Area",
+        "value": {
+             "type": "Polygon",
+             "coordinates":[
+                [
+                   [0, 27.60],
+                   [27, 27.60],
+                   [27, 33.70],
+                   [0, 33.70],
+                   [0, 27.60]
+                ]
+             ]
+        }
+        }
+    },
+    {
+      "id":"urn:ngsi-ld:Zone:004", 
+      "type":"Zone",
+      "refFloor": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Floor:001"
+        },
+      "refBuilding": {
+            "type": "Relationship", 
+            "value": "urn:ngsi-ld:Building:001"
+        },
+      "name": {
+        "value": "CVRL"
+        },
+      "location": {
+        "type": "2D:Area",
+        "value": {
+             "type": "Polygon",
+             "coordinates":[
+                [
+                   [27, 27.60],
+                   [31.50, 27.60],
+                   [31.50, 29],
+                   [36, 29],
+                   [36, 38.70],
+                   [27, 38.70],
+                   [27, 27.60]
+                ]
+             ]
+        }
+        }
+    }
+  ]
+}
