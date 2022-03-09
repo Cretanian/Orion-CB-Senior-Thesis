@@ -1,0 +1,961 @@
+{
+	"info": {
+		"_postman_id": "c206263e-63c6-4a1e-b013-7d182739a04c",
+		"name": "FINALL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Some Queries",
+			"item": [
+				{
+					"name": "GETTING A BUILDING",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/urn:ngsi-ld:Building:001?options=keyValues",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Building:001"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "address.addressLocality==Kreuzberg",
+									"description": "By sub-attribute",
+									"disabled": true
+								},
+								{
+									"key": "mq",
+									"value": "address.verified==true",
+									"description": "By metadata",
+									"disabled": true
+								},
+								{
+									"key": "options",
+									"value": "keyValues"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING FLOOR",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=keyValues&type=Floor",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues"
+								},
+								{
+									"key": "type",
+									"value": "Floor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING ZONE coordinates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=keyValues&type=Zone&attrs=location&q=name == ISL",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues"
+								},
+								{
+									"key": "type",
+									"value": "Zone"
+								},
+								{
+									"key": "attrs",
+									"value": "location"
+								},
+								{
+									"key": "q",
+									"value": "name == ISL"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING ROOM",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?type=Room",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Room"
+								},
+								{
+									"key": "options",
+									"value": "keyValues",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CHILD TO PARENT tmp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/urn:ngsi-ld:Device:001?options=values&type=Device&q=refRoom==urn:ngsi-ld:Room:014&attrs=occupancy",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Device:001"
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "values"
+								},
+								{
+									"key": "type",
+									"value": "Device"
+								},
+								{
+									"key": "q",
+									"value": "refRoom==urn:ngsi-ld:Room:014"
+								},
+								{
+									"key": "attrs",
+									"value": "occupancy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PARENT TO CHILD",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=values&type=Device&attrs=occupancy&q=refRoom==urn:ngsi-ld:Room:014",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "values"
+								},
+								{
+									"key": "type",
+									"value": "Device"
+								},
+								{
+									"key": "attrs",
+									"value": "occupancy"
+								},
+								{
+									"key": "q",
+									"value": "refRoom==urn:ngsi-ld:Room:014"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING DEVICE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/urn:ngsi-ld:Device:009?metadata=dateModified",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Device:009"
+							],
+							"query": [
+								{
+									"key": "attrs",
+									"value": "occupancy",
+									"disabled": true
+								},
+								{
+									"key": "metadata",
+									"value": "dateModified"
+								},
+								{
+									"key": "options",
+									"value": "values",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING ALL DEVICES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "count",
+									"description": "Keeps out the metadata and attribute type",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Device",
+									"description": "By type",
+									"disabled": true
+								},
+								{
+									"key": "attrs",
+									"value": "occupancy",
+									"disabled": true
+								},
+								{
+									"key": "metadata",
+									"value": "dateModified",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING ISL ROOM ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=keyValues&type=Room&attrs=id,refZone&q=refZone==urn:ngsi-ld:Zone:001",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues",
+									"description": "Keeps out the metadata and attribute type"
+								},
+								{
+									"key": "type",
+									"value": "Room",
+									"description": "By type"
+								},
+								{
+									"key": "attrs",
+									"value": "id,refZone"
+								},
+								{
+									"key": "q",
+									"value": "refZone==urn:ngsi-ld:Zone:001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1) GETTING ISL DEVICES IN RANGE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=count&type=Room&attrs=id&q=refZone==urn:ngsi-ld:Zone:001",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "count",
+									"description": "Keeps out the metadata and attribute type"
+								},
+								{
+									"key": "type",
+									"value": "Room",
+									"description": "By type"
+								},
+								{
+									"key": "attrs",
+									"value": "id"
+								},
+								{
+									"key": "q",
+									"value": "refZone==urn:ngsi-ld:Zone:001"
+								},
+								{
+									"key": "q",
+									"value": "location< 15",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETTING OCCUPANCY ISL ROOM",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=values&type=Device&attrs=occupancy&q=refRoom==urn:ngsi-ld:Room:001",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "values",
+									"description": "Keeps out the metadata and attribute type"
+								},
+								{
+									"key": "type",
+									"value": "Device",
+									"description": "By type"
+								},
+								{
+									"key": "attrs",
+									"value": "occupancy"
+								},
+								{
+									"key": "q",
+									"value": "refRoom==urn:ngsi-ld:Room:001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2) GETTING ISL DEVICES IN RANGE Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/?options=keyValues&type=Device&attrs=location&q=refRoom==urn:ngsi-ld:Room:009",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								""
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues",
+									"description": "Keeps out the metadata and attribute type"
+								},
+								{
+									"key": "type",
+									"value": "Device",
+									"description": "By type"
+								},
+								{
+									"key": "attrs",
+									"value": "location"
+								},
+								{
+									"key": "q",
+									"value": "refRoom==urn:ngsi-ld:Room:009"
+								},
+								{
+									"key": "q",
+									"value": "location< 15",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Device",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "fiware-service",
+								"value": "buildings",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/ITE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 5\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/urn:ngsi-ld:Device:001/attrs?type=Device",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Device:001",
+								"attrs"
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Device"
+								},
+								{
+									"key": "attrs",
+									"value": "occupancy",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CREATING BUILDING",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "fiware-service",
+						"value": "buildings",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/ITE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Building:001\",\r\n    \"type\": \"Building\",\r\n    \"address\": {\r\n        \"type\": \"PostalAddress\",\r\n        \"value\": {\r\n            \"streetAddress\": \"Nikolaou Plastira ITE\",\r\n            \"addressRegion\": \"Greece\",\r\n            \"addressLocality\": \"Heraklion/Crete\",\r\n            \"postalCode\": \"71500\"\r\n        }\r\n    },\r\n    \"category\": {\r\n        \"value\": [\"office\"]\r\n    },\r\n    \"name\": {\r\n        \"value\": \"Computer Science Labs\"\r\n    },\r\n    \"description\": {\r\n        \"value\": \"Four different kind of labs are part of the Computer Science lab\"\r\n    },\r\n    \"openingHours\": {\r\n        \"value\": [\"Mo-Fr 10:00-19:00\", \"Sa 10:00-22:00\", \"Su 10:00-21:00\"]\r\n    },\r\n    \"location\": {\r\n        \"type\": \"geo:json\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                    [35.30489070759817, 25.07212132094572],\r\n                    [35.30509501689339, 25.072462710424574],\r\n                    [35.30538290638819, 25.07221615135651],\r\n                    [35.30517395443743, 25.071852002579064],\r\n                    [35.30489070759817, 25.07212132094572]\r\n                ]\r\n             ]\r\n        }\r\n    }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://{{orion}}/v2/entities",
+					"protocol": "http",
+					"host": [
+						"{{orion}}"
+					],
+					"path": [
+						"v2",
+						"entities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATING FLOOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "fiware-service",
+						"value": "buildings",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/ITE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionType\":\"APPEND\",\r\n  \"entities\":[\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Floor:000\", \r\n      \"type\":\"Floor\",\r\n      \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"Basement\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [0, 0],\r\n                   [38.80, 0],\r\n                   [38.80, 2.15],\r\n                   [42.05, 2.15],\r\n                   [42.05, 10.70],\r\n                   [43.45, 10.70],\r\n                   [43.45, 14],\r\n                   [42.05, 14],                   \r\n                   [42.05, 27.50],\r\n                   [38.80, 27.50],\r\n                   [38.80, 39.45],\r\n                   [0, 39.45],\r\n                   [0, 0]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    },\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Floor:001\", \r\n      \"type\":\"Floor\",\r\n      \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"Ground Floor\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [0, 0], \r\n                   [40.80, 0],\r\n                   [40.80, 10],\r\n                   [42.20, 10],\r\n                   [42.20, 13.50],\r\n                   [39.20, 13.50],\r\n                   [39.20, 27.70],\r\n                   [36, 27.70],\r\n                   [36, 38.70],\r\n                   [35.55, 38.70],\r\n                   [35.55, 41.15],\r\n                   [19.50, 41.15],\r\n                   [19.50, 46.15],\r\n                   [17.10, 46.15],\r\n                   [17.10, 41.15],\r\n                   [1.05, 41.15],\r\n                   [1.05, 70],\r\n                   [0, 38.70],\r\n                   [0, 25.45],\r\n                   [-1.05, 25.45],\r\n                   [-1.05, 20.60],\r\n                   [0, 20.60],\r\n                   [0, 18.10],\r\n                   [-1.05, 18.10],\r\n                   [-1.05, 13.25],\r\n                   [0, 13.25],\r\n                   [0, 0]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    },\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Floor:002\", \r\n      \"type\":\"Floor\",\r\n      \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"First Floor\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [0, 0],\r\n                   [40.80, 0],\r\n                   [40.80, 10],\r\n                   [42.20, 10],\r\n                   [42.20, 13.50],\r\n                   [39.20, 13.50],\r\n                   [39.20, 27.70],\r\n                   [36, 27.70],\r\n                   [36, 38.70],\r\n                   [35.55, 38.70],\r\n                   [35.55, 41.15],\r\n                   [19.50, 41.15],\r\n                   [19.50, 46.15],\r\n                   [17.10, 46.15],\r\n                   [17.10, 41.15],\r\n                   [1.05, 41.15],\r\n                   [1.05, 70],\r\n                   [0, 38.70],\r\n                   [0, 25.45],\r\n                   [-1.05, 25.45],\r\n                   [-1.05, 20.60],\r\n                   [0, 20.60],\r\n                   [0, 18.10],\r\n                   [-1.05, 18.10],\r\n                   [-1.05, 13.25],\r\n                   [0, 13.25],\r\n                   [0, 0]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://{{orion}}/v2/op/update/",
+					"protocol": "http",
+					"host": [
+						"{{orion}}"
+					],
+					"path": [
+						"v2",
+						"op",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATING ZONES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "fiware-service",
+						"value": "buildings",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/ITE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionType\":\"APPEND\",\r\n  \"entities\":[\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Zone:000\", \r\n      \"type\":\"Zone\",\r\n      \"refFloor\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Floor:001\"\r\n        },\r\n       \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"TNL\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [0, 0],\r\n                   [13.50, 0],\r\n                   [13.50, 11.10],\r\n                   [0, 11.10],\r\n                   [0, 0]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    },\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Zone:001\", \r\n      \"type\":\"Zone\",\r\n      \"refFloor\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Floor:001\"\r\n        },\r\n       \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"ISL\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [13.50, 0], \r\n                   [24.75, 0],\r\n                   [24.75, 11.10],\r\n                   [13.50, 11.10],\r\n                   [13.50, 0]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    },\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Zone:002\", \r\n      \"type\":\"Zone\",\r\n      \"refFloor\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Floor:001\"\r\n        },\r\n       \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"ISL CCI\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [24.75, 0],\r\n                   [36, 0],\r\n                   [36, 9.70],\r\n                   [31.50, 9.70],\r\n                   [31.50, 11.10],\r\n                   [24.75, 11.10],\r\n                   [24.75, 0]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    },\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Zone:003\", \r\n      \"type\":\"Zone\",\r\n      \"refFloor\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Floor:001\"\r\n        },\r\n       \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"HCI\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [0, 27.60],\r\n                   [27, 27.60],\r\n                   [27, 33.70],\r\n                   [0, 33.70],\r\n                   [0, 27.60]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    },\r\n    {\r\n      \"id\":\"urn:ngsi-ld:Zone:004\", \r\n      \"type\":\"Zone\",\r\n      \"refFloor\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Floor:001\"\r\n        },\r\n      \"refBuilding\": {\r\n            \"type\": \"Relationship\", \r\n            \"value\": \"urn:ngsi-ld:Building:001\"\r\n        },\r\n      \"name\": {\r\n        \"value\": \"CVRL\"\r\n        },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n             \"type\": \"Polygon\",\r\n             \"coordinates\":[\r\n                [\r\n                   [27, 27.60],\r\n                   [31.50, 27.60],\r\n                   [31.50, 29],\r\n                   [36, 29],\r\n                   [36, 38.70],\r\n                   [27, 38.70],\r\n                   [27, 27.60]\r\n                ]\r\n             ]\r\n        }\r\n        }\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://{{orion}}/v2/op/update",
+					"protocol": "http",
+					"host": [
+						"{{orion}}"
+					],
+					"path": [
+						"v2",
+						"op",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATING ROOMS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "fiware-service",
+						"value": "buildings",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/ITE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionType\":\"APPEND\",\r\n  \"entities\":[\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:001\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G176\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 0],\r\n                    [2.25, 0],\r\n                    [2.25, 5],\r\n                    [0, 5],\r\n                    [0, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:002\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G175\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [2.25, 0],\r\n                    [4.50, 0],\r\n                    [4.50, 5],\r\n                    [2.25, 5],\r\n                    [2.25, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:003\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G174\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [4.50, 0],\r\n                    [6.75, 0],\r\n                    [6.75, 5],\r\n                    [4.50, 5],\r\n                    [4.50, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:004\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G173\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [6.75, 0],\r\n                    [9, 0],\r\n                    [9, 5],\r\n                    [6.75, 5],\r\n                    [6.75, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:005\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G172\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 0],\r\n                    [11.25, 0],\r\n                    [11.25, 5],\r\n                    [9, 5],\r\n                    [9, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:006\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G171\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [11.25, 0],\r\n                    [13.50, 0],\r\n                    [13.50, 5],\r\n                    [11.25, 5],\r\n                    [11.25, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:007\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Lab G170\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"lab\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 5],\r\n                    [13.50, 5],\r\n                    [13.50, 11.10],\r\n                    [4.5, 11.10],\r\n                    [4.5, 6.20],\r\n                    [0, 6.20],\r\n                    [0, 5]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:008\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G177\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:000\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 6.20],\r\n                    [4.5, 6.20],\r\n                    [4.5,11.10],\r\n                    [0, 11.10],\r\n                    [0, 6.20]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    \r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:009\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G165\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [13.50, 0],\r\n                    [15.75, 0],\r\n                    [15.75, 5],\r\n                    [13.50, 5],\r\n                    [13.50, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:010\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G164\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [15.75, 0],\r\n                    [18, 0],\r\n                    [18, 5],\r\n                    [15.75, 5],\r\n                    [15.75, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:011\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G163\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [18, 0],\r\n                    [20.25, 0],\r\n                    [20.25, 5],\r\n                    [18, 5],\r\n                    [18, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:012\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G162\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [20.25, 0],\r\n                    [22.50, 0],\r\n                    [22.50, 5],\r\n                    [20.25, 5],\r\n                    [20.25, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:013\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G161\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [22.50, 0],\r\n                    [24.75, 0],\r\n                    [24.75, 5],\r\n                    [22.50, 5],\r\n                    [22.50, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:014\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Lab G160\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"lab\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [13.50, 5],\r\n                    [24.75, 5],\r\n                    [24.75, 11.10],\r\n                    [13.50, 11.10],\r\n                    [13.50, 5]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    \r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:015\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G155\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 0],\r\n                    [27, 0],\r\n                    [27, 5],\r\n                    [24.75, 5],\r\n                    [24.75, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:016\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G154\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [27, 0],\r\n                    [29.25, 0],\r\n                    [29.25, 5],\r\n                    [27, 5],\r\n                    [27, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:017\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G153\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [29.25, 0],\r\n                    [31.50, 0],\r\n                    [31.50, 5],\r\n                    [29.25, 5],\r\n                    [29.25, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:018\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G152\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 0],\r\n                    [33.75, 0],\r\n                    [33.75, 5],\r\n                    [31.50, 5],\r\n                    [31.50, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:019\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G151\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [33.75, 0],\r\n                    [36, 0],\r\n                    [36, 5],\r\n                    [33.75, 5],\r\n                    [33.75, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:020\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Lab G150\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"lab\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 5],\r\n                    [36, 5],\r\n                    [36, 9.70],\r\n                    [31.50, 9.70],\r\n                    [31.50, 11.10],\r\n                    [24.75, 11.10],\r\n                    [24.75, 5]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    \r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:022\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Bathroom G156\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"bathroom\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 9.70],\r\n                    [36, 9.70],\r\n                    [36, 11.40],\r\n                    [31.50, 11.40],\r\n                    [31.50, 9.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:023\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"South Route\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"route\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 11.10],\r\n                    [31.50, 11.10],\r\n                    [31.50, 11.40],\r\n                    [36, 11.40],\r\n                    [36, 13.25],\r\n                    [0, 13.25],\r\n                    [0, 11.10]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:024\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"East Route\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"route\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [29.25, 13.25],\r\n                    [31.50, 13.25],\r\n                    [31.50, 25.45],\r\n                    [29.25, 25.45],\r\n                    [29.25, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:023\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"West Route\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"route\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [7.75, 13.25],\r\n                    [9, 13.25],\r\n                    [9, 25.45],\r\n                    [7.75, 25.45],\r\n                    [7.75, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n   \r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:023\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"North Route\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"route\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 25.45],\r\n                    [36, 25.45],\r\n                    [36, 27.30],\r\n                    [31.50, 27.30],\r\n                    [31.50, 27.60],\r\n                    [0, 27.60],\r\n                    [0, 25.45]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:025\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Middle West Meeting Room\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"meeting room\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [-1.05, 13.25],\r\n                    [3.75, 13.25],\r\n                    [3.75, 18.10],\r\n                    [-1.05, 18.10],\r\n                    [-1.05, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:026\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Middle South Bathroom\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"bathroom\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [3.75, 13.25],\r\n                    [6.25, 13.25],\r\n                    [6.25, 18.10],\r\n                    [3.75, 18.10],\r\n                    [3.75, 13.25]\r\n\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:028\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Middle North kitchen\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"kitchen\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 18.10],\r\n                    [6.25, 18.10],\r\n                    [6.25, 20.60],\r\n                    [3.75, 20.60],\r\n                    [3.75, 25.45],\r\n                    [-1.05, 25.45],\r\n                    [-1.05, 20.60],\r\n                    [0, 20.60],\r\n                    [0, 18.10]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:066\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Middle North Bathroom\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"bathroom\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [3.75, 20.60],\r\n                    [6.25, 20.60],\r\n                    [6.25, 25.45],\r\n                    [3.75, 25.45],\r\n                    [3.75, 20.60]\r\n\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:029\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G106\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 13.25],\r\n                    [13.50, 13.25],\r\n                    [13.50, 15.50],\r\n                    [9, 15.50],\r\n                    [9, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:030\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G105\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 15.50],\r\n                    [13.50, 15.50],\r\n                    [13.50, 17.75],\r\n                    [9, 17.75],\r\n                    [9, 15.50]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:031\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G104\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 17.75],\r\n                    [13.50, 17.75],\r\n                    [13.50, 20],\r\n                    [9, 20],\r\n                    [9, 17.75]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:032\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G103\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 20],\r\n                    [13.50, 20],\r\n                    [13.50, 22.25],\r\n                    [9, 22.25],\r\n                    [9, 20]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:033\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G102\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 22.25],\r\n                    [13.50, 22.25],\r\n                    [13.50, 25.45],\r\n                    [9, 25.45],\r\n                    [9, 22.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:034\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"middle skylight\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"skylight\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [13.50, 13.25],\r\n                    [24.75, 13.25],\r\n                    [24.75, 25.45],\r\n                    [13.50, 25.45],\r\n                    [13.50, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:035\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G148\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 13.25],\r\n                    [29.25, 13.25],\r\n                    [29.25, 15.50],\r\n                    [24.75, 15.50],\r\n                    [24.75, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:036\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G146\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 15.50],\r\n                    [29.25, 15.50],\r\n                    [29.25, 17.75],\r\n                    [24.75, 17.75],\r\n                    [24.75, 15.50]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:037\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G144\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 17.75],\r\n                    [29.25, 17.75],\r\n                    [29.25, 20],\r\n                    [24.75, 20],\r\n                    [24.75, 17.75]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:038\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G142\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 20],\r\n                    [29.25, 20],\r\n                    [29.25, 22.25],\r\n                    [24.75, 22.25],\r\n                    [24.75, 20]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:039\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G140\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 22.25],\r\n                    [29.25, 22.25],\r\n                    [29.25, 25.45],\r\n                    [24.75, 25.45],\r\n                    [24.75, 22.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:040\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G149\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 13.25],\r\n                    [36, 13.25],\r\n                    [36, 15.50],\r\n                    [31.50, 15.50],\r\n                    [31.50, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:041\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G147\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 15.50],\r\n                    [36, 15.50],\r\n                    [36, 17.75],\r\n                    [31.50, 17.75],\r\n                    [31.50, 15.50]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:042\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G145\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 17.75],\r\n                    [36, 17.75],\r\n                    [36, 20],\r\n                    [31.50, 20],\r\n                    [31.50, 17.75]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:043\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G143\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 20],\r\n                    [36, 20],\r\n                    [36, 22.25],\r\n                    [31.50, 22.25],\r\n                    [31.50, 20]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:044\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G141\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 22.25],\r\n                    [36, 22.25],\r\n                    [36, 25.45],\r\n                    [31.50, 25.45],\r\n                    [31.50, 22.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:045\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G111\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 33.70],\r\n                    [2.25, 33.70],\r\n                    [2.25, 38.70],\r\n                    [0, 38.70],\r\n                    [0, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:046\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G112\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [2.25, 33.70],\r\n                    [4.50, 33.70],\r\n                    [4.50, 38.70],\r\n                    [2.25, 38.70],\r\n                    [2.25, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:047\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G113\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [4.50, 33.70],\r\n                    [6.75, 33.70],\r\n                    [6.75, 38.70],\r\n                    [4.50, 38.70],\r\n                    [4.50, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:048\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G114\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [6.75, 33.70],\r\n                    [9, 33.70],\r\n                    [9, 38.70],\r\n                    [6.75, 38.70],\r\n                    [6.75, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:049\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G115\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [9, 33.70],\r\n                    [11.25, 33.70],\r\n                    [11.25, 38.70],\r\n                    [9, 38.70],\r\n                    [9, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:050\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G116\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [11.25, 33.70],\r\n                    [13.50, 33.70],\r\n                    [13.50, 38.70],\r\n                    [11.25, 38.70],\r\n                    [11.25, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:069\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Lab G110\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"lab\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 27.60],\r\n                    [13.50, 27.60],\r\n                    [13.50, 33.70],\r\n                    [0, 33.70],\r\n                    [0, 27.60]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:051\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G121\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [13.50, 33.70],\r\n                    [15.75, 33.70],\r\n                    [15.75, 38.70],\r\n                    [13.50, 38.70],\r\n                    [13.50, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:052\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G122\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [15.75, 33.70],\r\n                    [18, 33.70],\r\n                    [18, 38.70],\r\n                    [15.75, 38.70],\r\n                    [15.75, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:053\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G123\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [18, 33.70],\r\n                    [20.25, 33.70],\r\n                    [20.25, 38.70],\r\n                    [18, 38.70],\r\n                    [18, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:054\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G124\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [20.25, 33.70],\r\n                    [22.50, 33.70],\r\n                    [22.50, 38.70],\r\n                    [20.25, 38.70],\r\n                    [20.25, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:055\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G125\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [22.50, 33.70],\r\n                    [24.75, 33.70],\r\n                    [24.75, 38.70],\r\n                    [22.50, 38.70],\r\n                    [22.50, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:056\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G126\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [24.75, 33.70],\r\n                    [27, 33.70],\r\n                    [27, 38.70],\r\n                    [24.75, 38.70],\r\n                    [24.75, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:057\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Lab G120\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"lab\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [13.50, 27.60],\r\n                    [27, 27.60],\r\n                    [27, 33.70],\r\n                    [13.50, 33.70],\r\n                    [13.50, 27.60]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:058\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G131\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:004\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [27, 33.70],\r\n                    [29.25, 33.70],\r\n                    [29.25, 38.70],\r\n                    [27, 38.70],\r\n                    [27, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:059\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G132\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:004\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [29.25, 33.70],\r\n                    [31.50, 33.70],\r\n                    [31.50, 38.70],\r\n                    [29.25, 38.70],\r\n                    [29.25, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:060\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G133\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:004\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 33.70],\r\n                    [33.75, 33.70],\r\n                    [33.75, 38.70],\r\n                    [31.50, 38.70],\r\n                    [31.50, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:061\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Office G134\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"office\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:004\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [33.75, 33.70],\r\n                    [36, 33.70],\r\n                    [36, 38.70],\r\n                    [33.75, 38.70],\r\n                    [33.75, 33.70]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:062\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Lab G130\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"lab\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"refZone\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Zone:004\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [27, 27.60],\r\n                    [31.50, 27.60],\r\n                    [31.50, 29],\r\n                    [36, 29],\r\n                    [36, 33.70],\r\n                    [27, 33.70],\r\n                    [27, 27.60]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:063\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Bathroom G135\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"bathroom\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [31.50, 27.30],\r\n                    [36, 27.30],\r\n                    [36, 29],\r\n                    [31.50, 29],\r\n                    [31.50, 27.30]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:027\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Inside Stairs\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"Stairs\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [6.25, 13.25],\r\n                    [7.75, 13.25],\r\n                    [7.75, 25.45],\r\n                    [6.25, 25.45],\r\n                    [6.25, 13.25]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:064\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Outside Stairs\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"Stairs\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [36, 0],\r\n                    [40.80, 0],\r\n                    [40.80, 10],\r\n                    [42.20, 10],\r\n                    [42.20, 13.50],\r\n                    [39.20, 13.50],\r\n                    [36, 27.70],\r\n                    [36, 0]\r\n            ]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Room:065\", \r\n      \"type\": \"Room\",\r\n      \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Front Entrense\"\r\n      },\r\n      \"roomType\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"Entrense\"\r\n      },\r\n      \"refFloor\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Floor:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [0, 38.70],\r\n                    [35.55, 38.70],\r\n                    [35.55, 41.15],\r\n                    [19.50, 41.15],\r\n                    [19.50, 46.15],\r\n                    [17.10, 46.15],\r\n                    [17.10, 41.15],\r\n                    [1.05, 41.15],\r\n                    [1.05, 38.70],\r\n                    [0, 38.70]\r\n            ]\r\n        }\r\n      }\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://{{orion}}/v2/op/update",
+					"protocol": "http",
+					"host": [
+						"{{orion}}"
+					],
+					"path": [
+						"v2",
+						"op",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATING DEVICES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "fiware-service",
+						"value": "buildings",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/ITE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionType\":\"APPEND\",\r\n  \"entities\":[\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:001\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:001\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [0, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:002\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:002\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [2.25, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:003\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:003\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [4.50, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:004\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:004\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [6.75, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:005\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:005\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:006\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:006\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [11.25, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n        \"id\": \"urn:ngsi-ld:Device:007\", \r\n        \"type\": \"Device\",\r\n        \"category\": {\r\n          \"value\": [\"sensor\"]\r\n        },\r\n        \"occupancy\": {\r\n          \"type\": \"Integer\",\r\n          \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n        },\r\n        \"refRoom\": {\r\n          \"type\": \"Relationship\", \r\n          \"value\": \"urn:ngsi-ld:Room:007\"\r\n        },\r\n        \"location\": {\r\n          \"type\": \"2D:Area\", \r\n          \"value\": { \r\n              \"type\": \"point\",\r\n              \"coordinates\": [0, 5]\r\n          }\r\n        }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:008\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:008\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [0, 6.20]\r\n        }\r\n      }\r\n    },    \r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:009\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:009\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [15.75, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:010\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:010\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [18, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:011\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:011\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [20.25, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:012\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:012\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [22.50, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:013\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:013\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n        \"id\": \"urn:ngsi-ld:Device:014\", \r\n        \"type\": \"Device\",\r\n        \"category\": {\r\n          \"value\": [\"sensor\"]\r\n        },\r\n        \"occupancy\": {\r\n          \"type\": \"Integer\",\r\n          \"value\": 0,\r\n            \"metadata\": {\r\n                \"dateModified\":{\r\n                    \"type\": \"DateTime\",\r\n                    \"value\": \"2018-05-25T10:51:32\"\r\n                }\r\n            }\r\n        },\r\n        \"refRoom\": {\r\n          \"type\": \"Relationship\", \r\n          \"value\": \"urn:ngsi-ld:Room:014\"\r\n        },\r\n        \"location\": {\r\n          \"type\": \"2D:Area\", \r\n          \"value\": { \r\n              \"type\": \"point\",\r\n              \"coordinates\": [24.75, 11.10]\r\n          }\r\n        }\r\n      },\r\n\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:015\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n       \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:015\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:016\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:016\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [27, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:017\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:017\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [29.25, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:018\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:018\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [31.50, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:019\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:019\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [33.75, 0]\r\n        }\r\n      }\r\n    },\r\n    {\r\n        \"id\": \"urn:ngsi-ld:Device:020\", \r\n        \"type\": \"Device\",\r\n        \"category\": {\r\n          \"value\": [\"sensor\"]\r\n        },\r\n        \"occupancy\": {\r\n          \"type\": \"Integer\",\r\n          \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n        },\r\n        \"refRoom\": {\r\n          \"type\": \"Relationship\", \r\n          \"value\": \"urn:ngsi-ld:Room:020\"\r\n        },\r\n        \"location\": {\r\n          \"type\": \"2D:Area\", \r\n          \"value\": { \r\n              \"type\": \"point\",\r\n              \"coordinates\": [24.75, 5]\r\n          }\r\n        }\r\n      },\r\n\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:021\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:029\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 13.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:049\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:030\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 15.50]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:022\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:031\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 17.75]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:023\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:032\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 20]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:024\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:033\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 22.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:025\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:034\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [13.50, 13.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:026\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:035\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 13.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:027\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:036\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\":  [24.75, 15.50]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:028\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:037\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 17.75]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:029\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:038\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 20]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:030\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:039\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 22.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:031\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:040\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [31.50, 13.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:032\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:041\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [31.50, 15.50]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:033\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:042\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\":  [31.50, 17.75]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:034\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:043\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [31.50, 20]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:035\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:044\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [31.50, 22.25]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:036\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:045\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [0, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:037\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:046\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [2.25, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:038\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:047\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [4.50, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:039\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:048\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [6.75, 33.70]\r\n        }\r\n      }\r\n    }\r\n    ,\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:040\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:049\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [9, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:041\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:050\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [11.25, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:042\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:051\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [13.50, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:043\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:052\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [15.75, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:044\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:053\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [18, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:045\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:054\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [20.25, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:046\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:055\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [22.50, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:047\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:056\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:048\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:058\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [27, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:049\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:059\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [29.25, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:050\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:060\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [31.50, 33.70]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:051\", \r\n      \"type\": \"Device\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"occupancy\": {\r\n        \"type\": \"Integer\",\r\n        \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:061\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [33.75, 33.70]\r\n        }\r\n      }      \r\n    },\r\n    {\r\n        \"id\": \"urn:ngsi-ld:Device:052\", \r\n        \"type\": \"Device\",\r\n        \"category\": {\r\n          \"value\": [\"sensor\"]\r\n        },\r\n        \"occupancy\": {\r\n          \"type\": \"Integer\",\r\n          \"value\": 0,\r\n        \"metadata\": {\r\n            \"dateModified\":{\r\n                \"type\": \"DateTime\",\r\n                \"value\": \"2018-05-25T10:51:32\"\r\n            }\r\n        }\r\n        },\r\n        \"refRoom\": {\r\n          \"type\": \"Relationship\", \r\n          \"value\": \"urn:ngsi-ld:Room:062\"\r\n        },\r\n        \"location\": {\r\n          \"type\": \"2D:Area\", \r\n          \"value\": { \r\n              \"type\": \"point\",\r\n              \"coordinates\": [33.75, 33.70]\r\n          }\r\n        }      \r\n      }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://{{orion}}/v2/op/update",
+					"protocol": "http",
+					"host": [
+						"{{orion}}"
+					],
+					"path": [
+						"v2",
+						"op",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATING DEVICES 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "fiware-service",
+						"value": "buildings",
+						"type": "text"
+					},
+					{
+						"key": "fiware-servicepath",
+						"value": "/ITE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"actionType\":\"APPEND\",\r\n  \"entities\":[\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:001\", \r\n      \"type\": \"OxygenDevice\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"Oxygen\": {\r\n            \"type\": \"float\",\r\n            \"value\": 2.76\r\n        },\r\n      \"coverage\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [12.50, 0],\r\n                    [15.75, 0],\r\n                    [15.75, 5],\r\n                    [12.50, 5],\r\n                    [12.50, 0]\r\n            ]\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:009\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [15.75, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:002\", \r\n      \"type\": \"OxygenDevice\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"Oxygen\": {\r\n            \"type\": \"float\",\r\n            \"value\": 2.96\r\n       },\r\n      \"coverage\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [14.75, 3.5],\r\n                    [18, 3.5],\r\n                    [18, 5],\r\n                    [14.75, 5],\r\n                    [14.75, 3.5]\r\n            ]\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:010\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [18, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:003\", \r\n      \"type\": \"OxygenDevice\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n     \"Oxygen\": {\r\n            \"type\": \"float\",\r\n            \"value\": 4\r\n       },\r\n    \"coverage\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [18, -0.5],\r\n                    [20.25, -0.5],\r\n                    [20.25, 5],\r\n                    [18, 5],\r\n                    [18, -0.5]\r\n            ]\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:011\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [20.25, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:004\", \r\n      \"type\": \"OxygenDevice\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n     \"Oxygen\": {\r\n            \"type\": \"float\",\r\n            \"value\": 3.86\r\n       },\r\n      \"coverage\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [19.50, 4],\r\n                    [22.50, 4],\r\n                    [22.50, 5],\r\n                    [19.50, 5],\r\n                    [19.50, 4]\r\n            ]\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:012\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [22.50, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"id\": \"urn:ngsi-ld:Device:005\", \r\n      \"type\": \"OxygenDevice\",\r\n      \"category\": {\r\n        \"value\": [\"sensor\"]\r\n      },\r\n      \"Oxygen\": {\r\n            \"type\": \"float\",\r\n            \"value\": 3.16\r\n       },\r\n      \"coverage\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [22.50, 0],\r\n                    [24.75, 0],\r\n                    [24.75, 5],\r\n                    [22.50, 5],\r\n                    [22.50, 0]\r\n            ]\r\n        }\r\n      },\r\n      \"refRoom\": {\r\n        \"type\": \"Relationship\", \r\n        \"value\": \"urn:ngsi-ld:Room:013\"\r\n      },\r\n      \"location\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"point\",\r\n            \"coordinates\": [24.75, 5]\r\n        }\r\n      }\r\n    },\r\n    {\r\n        \"id\": \"urn:ngsi-ld:Device:006\", \r\n        \"type\": \"OxygenDevice\",\r\n        \"category\": {\r\n          \"value\": [\"sensor\"]\r\n        },\r\n        \"Oxygen\": {\r\n            \"type\": \"float\",\r\n            \"value\": 3.32\r\n        },\r\n        \"coverage\": {\r\n        \"type\": \"2D:Area\", \r\n        \"value\": { \r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                    [18, 5],\r\n                    [24.75, 5],\r\n                    [24.75, 11.10],\r\n                    [18, 11.10],\r\n                    [18, 5]\r\n            ]\r\n        }\r\n      },\r\n        \"refRoom\": {\r\n          \"type\": \"Relationship\", \r\n          \"value\": \"urn:ngsi-ld:Room:014\"\r\n        },\r\n        \"location\": {\r\n          \"type\": \"2D:Area\", \r\n          \"value\": { \r\n              \"type\": \"point\",\r\n              \"coordinates\": [24.75, 11.10]\r\n          }\r\n        }\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://{{orion}}/v2/op/update",
+					"protocol": "http",
+					"host": [
+						"{{orion}}"
+					],
+					"path": [
+						"v2",
+						"op",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "orion",
+			"value": "localhost:1026"
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "f858da84-4ef0-4464-8735-d1bd4cadc741",
+		"name": "Data Models",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Building",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"building-a85e3da145c1\",\r\n    \"type\": \"Building\",\r\n    \"category\": {\r\n        \"value\": [\"office\"]\r\n    },\r\n    \"name\": {\r\n        \"value\": \"Step C\"\r\n    },\r\n    \"description\": {\r\n        \"value\": \"Office block\"\r\n    },\r\n    \"location\": {\r\n        \"type\": \"geo:json\",\r\n        \"value\": {\r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                [\r\n                    [100, 0],\r\n                    [101, 0],\r\n                    [101, 1],\r\n                    [100, 1],\r\n                    [100, 0]\r\n                ]\r\n            ]\r\n        }\r\n    },\r\n    \"address\": {\r\n        \"type\": \"PostalAddress\",\r\n        \"value\": {\r\n            \"addressLocality\": \"London\",\r\n            \"postalCode\": \"EC4N 8AF\",\r\n            \"streetAddress\": \"25 Walbrook\"\r\n        }\r\n    },\r\n    \"openingHours\": {\r\n        \"value\": [\"Mo-Fr 10:00-19:00\", \"Sa 10:00-22:00\", \"Su 10:00-21:00\"]\r\n    }\r\n}"
+				},
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Floor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"urn:ngsi-ld:Floor:01\",\r\n   \"type\": \"Floor\",\r\n   \"refBuilding\": {\r\n       \"type\":  \"Relationship\"\r\n       \"value\": \"urn:ngsi-ld:Building:01\", \r\n    },\r\n    \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                [\r\n                    [5, 0],\r\n                    [20, 0],\r\n                    [50, 1],\r\n                    [40, 1],\r\n                    [30, 0]\r\n                ]\r\n            ]\r\n        }\r\n    }\r\n}\r\n    \"name\": {\r\n        \"value\": \"Step C\"\r\n    },\r\n    \"description\": {\r\n        \"value\": \"Office block\"\r\n    },"
+				},
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\": \"urn:ngsi-ld:Room:01\",\r\n   \"type\": \"Room\",\r\n   \"refFloor\": {\r\n       \"type\":  \"Relationship\"\r\n       \"value\": \"urn:ngsi-ld:Floor:01\", \r\n    },\r\n    \"location\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                [\r\n                    [5, 0],\r\n                    [20, 0],\r\n                    [50, 1],\r\n                    [40, 1],\r\n                    [30, 0]\r\n                ]\r\n            ]\r\n        }\r\n    },\r\n    \"name\":{\r\n        \"type\": \"Text\", \r\n        \"value\": \"Living Room\"\r\n    }\r\n}"
+				},
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Device:021\",\r\n    \"type\": \"Device\",\r\n    \"category\": {\r\n        \"value\": [\"sensor\"]\r\n    },\r\n    \"ipAddress\": {\r\n        \"value\": [\"192.14.56.78\"]\r\n    },\r\n    \"supportedProtocol \": {\r\n        \"value\": \"http\"\r\n    },\r\n     \"controlledProperty\": {\r\n        \"value\": [\"fillingLevel\", \"temperature\"]\r\n    },\r\n     \"controlledAsset\": {\r\n        \"value\": [\"room1\"]\r\n    },\r\n    \"refRoom\": {\r\n       \"type\": \"Relationship\"\r\n       \"value\": \"urn:ngsi-ld:Room:01\"\r\n    },\r\n    \"refFloor\": {\r\n       \"type\": \"Relationship\"\r\n       \"value\": \"urn:ngsi-ld:Floor:01\"\r\n    },\r\n    \"containedInPlace\": {\r\n        \"type\": \"2D:Area\",\r\n        \"value\": {\r\n            \"type\": \"Polygon\",\r\n            \"coordinates\": [\r\n                [\r\n                    [5, 0],\r\n                    [20, 0],\r\n                    [50, 1],\r\n                    [40, 1],\r\n                    [30, 0]\r\n                ]\r\n            ]\r\n        }\r\n    }\r\n}"
+				},
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Device 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"urn:ngsi-ld:Device:001\", \r\n    \"type\": \"OxygenDevice\",\r\n    \"category\": {\r\n    \"value\": [\"sensor\"]\r\n    },\r\n    \"Oxygen\": {\r\n        \"type\": \"float\",\r\n        \"value\": 2.76\r\n    },\r\n    \"coverage\": {\r\n    \"type\": \"2D:Area\", \r\n    \"value\": { \r\n        \"type\": \"Polygon\",\r\n        \"coordinates\": [\r\n                [12.50, 0],\r\n                [15.75, 0],\r\n                [15.75, 5],\r\n                [12.50, 5],\r\n                [12.50, 0]\r\n        ]\r\n    }\r\n    },\r\n    \"refRoom\": {\r\n    \"type\": \"Relationship\", \r\n    \"value\": \"urn:ngsi-ld:Room:009\"\r\n    },\r\n    \"location\": {\r\n    \"type\": \"2D:Area\", \r\n    \"value\": { \r\n        \"type\": \"point\",\r\n        \"coordinates\": [15.75, 5]\r\n    }\r\n    }\r\n}"
+				},
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

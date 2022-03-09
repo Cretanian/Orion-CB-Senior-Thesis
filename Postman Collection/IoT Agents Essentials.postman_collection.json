@@ -1,0 +1,645 @@
+{
+	"info": {
+		"_postman_id": "b5d4563b-7441-4bad-af2d-d23afb4e0ff8",
+		"name": "IoT Agents Essentials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Service Group CRUD Actions",
+			"item": [
+				{
+					"name": "IoT Agent - Obtain Version Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/about",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"about"
+							]
+						},
+						"description": "Once the IoT Agent is running, You can check the status by making an HTTP request to the exposed port. \nIf the response is blank, this is usually because the MongoDB database holding the context information is not running or not connected.\n\n>**Troubleshooting:** What if the response is blank ?\n>\n> * To check that a docker container is running try\n>\n>```bash\n>docker ps\n>```\n>\n>You should see several containers running. If `iot-agent` is not running, you can restart the containers as necessary."
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Service Group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"services\": [\n   {\n     \"apikey\":      \"4jggokgpepnvsb2uv4s40d59ov\",\n     \"cbroker\":     \"http://orion:1026\",\n     \"entity_type\": \"Thing\",\n     \"resource\":    \"/iot/d\"\n   }\n ]\n}"
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/services",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"services"
+							]
+						},
+						"description": "This example provisions an anonymous group of devices. It tells the IoT Agent that a series of devices\nwill be sending messages to the `IOTA_HTTP_PORT` (where the IoT Agent is listening for **Northbound** communications)\n\nIn the example the IoT Agent is informed that the `/iot/d` endpoint will be used and that devices will authenticate\nthemselves by including the token `4jggokgpepnvsb2uv4s40d59ov`."
+					},
+					"response": []
+				},
+				{
+					"name": "Read Service Group details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/services?apikey=4jggokgpepnvsb2uv4s40d59ov",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"services"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "4jggokgpepnvsb2uv4s40d59ov"
+								}
+							]
+						},
+						"description": "This example obtains the full details of a provisioned services with a given `resource` path.\n\nThe response includes all the defaults associated with the service group such as the `entity_type` and any default commands or attribute mappings.\n\nService group details can be read by making a GET request to the `/iot/services` endpoint and providing a `resource` parameter."
+					},
+					"response": []
+				},
+				{
+					"name": "List all Service Groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/services",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"services"
+							]
+						},
+						"description": "This example lists all provisioned services by making a GET request to the `/iot/services/` endpoint.\n\nThe response includes all the defaults associated with each service group such as the `entity_type` and any default commands or attribute mappings."
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Service Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"entity_type\": \"IoT-Device\"\n}"
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/services?resource=/iot/d&apikey=4jggokgpepnvsb2uv4s40d59ov",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"services"
+							],
+							"query": [
+								{
+									"key": "resource",
+									"value": "/iot/d"
+								},
+								{
+									"key": "apikey",
+									"value": "4jggokgpepnvsb2uv4s40d59ov"
+								}
+							]
+						},
+						"description": "This example updates an existing service group with a given `resource` path and `apikey`\n\nService group details can be updated by making a PUT request to the `/iot/services` endpoint \nand providing a `resource` and `apikey` parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Service Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/services/?resource=/iot/d&apikey=4jggokgpepnvsb2uv4s40d59ov",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"services",
+								""
+							],
+							"query": [
+								{
+									"key": "resource",
+									"value": "/iot/d",
+									"description": "The path that the IoT Agent had been listening on"
+								},
+								{
+									"key": "apikey",
+									"value": "4jggokgpepnvsb2uv4s40d59ov"
+								}
+							]
+						},
+						"description": "This example removes a provisioned service group by making a DELETE request to the `/iot/services/` endpoint.\n\nIt means that requests to `http://iot-agent:7896/iot/d?i=<device_id>&k=4jggokgpepnvsb2uv4s40d59ov`\n(where the IoT Agent is listening for **Northbound** communications) should no longer be processed by the IoT Agent. \nThe `apiKey` and `resource` parameters must be supplied in order to identify the service group to be deleted."
+					},
+					"response": []
+				}
+			],
+			"description": "The **CRUD** operations for a service group map on to the expected HTTP verbs under the `/iot/services` endpoint\n\n* **Create** - HTTP POST\n* **Read** - HTTP GET\n* **Update** - HTTP PUT\n* **Delete** - HTTP DELETE\n\nUse the `resource` and `apikey` parameters to uniquely identify a service group.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Device CRUD Actions",
+			"item": [
+				{
+					"name": "Create a Provisioned Device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"devices\": [\n    {\n      \"device_id\": \"bell002\",\n      \"entity_name\": \"urn:ngsi-ld:Bell:002\",\n      \"entity_type\": \"Bell\",\n      \"protocol\": \"PDI-IoTA-UltraLight\",\n      \"transport\": \"HTTP\",\n      \"endpoint\": \"http://context-provider:3001/iot/bell002\",\n      \"commands\": [ \n        {\n          \"name\": \"ring\",\n          \"type\": \"command\"\n        }\n       ],\n       \"static_attributes\": [\n         {\"name\":\"refStore\", \"type\": \"Relationship\",\"value\": \"urn:ngsi-ld:Store:002\"}\n    \t]\n    }\n  ]\n}\n"
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/devices",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"devices"
+							]
+						},
+						"description": "This example provisions an individual device. It maps the `device_id=bell002` to the entity URN `urn:ngsi-ld:Bell:002` and gives the\nentity a type `Bell`. The IoT Agent has been informed that the device offers a single `ring` `command` and is listening on \n`http://context-provider:3001/iot/bell002` using HTTP. `attributes`, `lazy` attributes and `static_attributes` can also be provisioned."
+					},
+					"response": []
+				},
+				{
+					"name": "IoT Agent - Provision a Sensor Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"devices\": [\n   {\n     \"device_id\":   \"motion001\",\n     \"entity_name\": \"urn:ngsd-ld:Motion:001\",\n     \"entity_type\": \"Motion\",\n     \"protocol\":    \"PDI-IoTA-UltraLight\",\n     \"timezone\":    \"Europe/Berlin\",\n     \"attributes\": [\n       { \"object_id\": \"c\", \"name\":\"count\", \"type\":\"Integer\"}\n      ],\n      \"static_attributes\": [\n         {\"name\":\"refStore\", \"type\": \"Relationship\",\"value\": \"urn:ngsi-ld:Store:001\"}\n      ]\n   }\n ]\n}\n"
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/devices",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"devices"
+							]
+						},
+						"description": "It is common good practice to use URNs following the NGSI-LD [draft recommendation](https://docbox.etsi.org/ISG/CIM/Open/ISG_CIM_NGSI-LD_API_Draft_for_public_review.pdf) when creating entities. Furthermore it is easier to understand\nmeaningful names when defining data attributes. These mappings can be defined by provisioning a device individually.\n\nThree types of meaasurement attributes can be provisioned:\n\n* `attributes` are active readings from the device\n* `lazy` attributes are only sent on request -  The IoT Agent will inform the device to return the measurement\n* `static_attributes` are as the name suggests static data about the device (such as relationships) passed on \n  to the context broker.\n\n>**Note**: in the case where individual `id`s are not required, or aggregated data is sufficient \n> the `attributes` can be defined within the provisioning service rather than individually.\n\nIn the request we are assiociating the device `motion001` with the URN `urn:ngsd-ld:Motion:001`\nand mapping the device reading `c` with the context attribute `count` (which is defined as an `Integer`)\nA `refStore` is defined as a `static_attribute`, placing the device within **Store** `urn:ngsi-ld:Store:001`"
+					},
+					"response": []
+				},
+				{
+					"name": "Dummy Device  - Measurement Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "c|1"
+						},
+						"url": {
+							"raw": "http://localhost:7896/iot/d?k=4jggokgpepnvsb2uv4s40d59ov&i=motion001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7896",
+							"path": [
+								"iot",
+								"d"
+							],
+							"query": [
+								{
+									"key": "k",
+									"value": "4jggokgpepnvsb2uv4s40d59ov"
+								},
+								{
+									"key": "i",
+									"value": "motion001"
+								}
+							]
+						},
+						"description": "This example simulates a request coming from the device `motion001`\n\nThe request to the previously provisioned resource `iot/d` is in UltraLight 2.0 format\nand identifies the device `motion001` and passes a known API key.\n\nA similar request was made in the previous tutorial (before the IoT Agent was connected)\nwhen the door was unlocked, you will have seen the state of each motion sensor changing\nand a Northbound request will be logged in the device monitor."
+					},
+					"response": []
+				},
+				{
+					"name": "Register Bell Commands",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"Bell Commands\",\n  \"dataProvided\": {\n    \"entities\": [\n      {\n        \"id\": \"urn:ngsi-ld:Bell:001\", \"type\": \"Bell\"\n      }\n    ],\n    \"attrs\": [\"ring\"]\n  },\n  \"provider\": {\n    \"http\": {\"url\": \"http://orion:1026/v2\"},\n    \"legacyForwarding\": true\n  }\n}"
+						},
+						"url": {
+							"raw": "http://{{orion}}/v2/registrations",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"registrations"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Store",
+									"description": "Entity type, to avoid ambiguity in case there are several entities with the same entity id",
+									"disabled": true
+								},
+								{
+									"key": "attrs",
+									"value": "name",
+									"description": "Ordered list of attribute names to display",
+									"disabled": true
+								}
+							]
+						},
+						"description": "This example registers the `ring` command for the entity with the `id=\"urn:ngsi-ld:Bell:001\"`\n\nTo register the command we need to inform Orion that the URL `http://orion:1026/v1` is able to provide\nthe missing `ring` attribute. This will then be forwarded on to the IoT Agent. As you see this is an NGSI v1 \nendpoint and therefore the `legacyForwarding` attribute must also be set."
+					},
+					"response": []
+				},
+				{
+					"name": "Ring Bell",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ring\": {\n      \"type\" : \"command\",\n      \"value\" : \"\"\n  }\n}"
+						},
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/urn:ngsi-ld:Bell:002/attrs",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Bell:002",
+								"attrs"
+							]
+						},
+						"description": "To invoke the `ring` command, the `ring` attribute must be updated in the context.\n\nIf you are viewing the device monitor page, you can also see the state of the bell change.\n\n![](https://fiware.github.io/tutorials.IoT-Agent/img/bell-ring.gif)\n\nNote that the response returns a **404** since the context broker was unable to update the\nattribute directly - it was fowarded to the IoT Agent."
+					},
+					"response": []
+				},
+				{
+					"name": "Bell Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"url": {
+							"raw": "http://{{orion}}/v2/entities/urn:ngsi-ld:Bell:001?options=keyValues",
+							"protocol": "http",
+							"host": [
+								"{{orion}}"
+							],
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Bell:001"
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues"
+								}
+							]
+						},
+						"description": "The result of the command to ring the bell can be read by querying the entity within the Orion Context Broker. \n\nThe `TimeInstant` shows last the time any command associated with the entity has been invoked. the result of `ring` command can be see in the value of the `ring_info` attribute"
+					},
+					"response": []
+				},
+				{
+					"name": "Read Provisioned Device Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/devices/bell002",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"devices",
+								"bell002"
+							]
+						},
+						"description": "This example obtains the full details of a provisioned device with a given `<device-id>` path.\n\nThe response includes all the commands and attributes mappings associated with the device\n\nProvisioned Device details can be read by making a GET request to the `/iot/devices/<device-id>` endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "List all Provisioned Devices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/devices",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"devices"
+							]
+						},
+						"description": "This example lists all provisioned devices by making a GET request to the `/iot/devices` endpoint.\n\nThe response includes all the commands and attributes mappings associated with all devices"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Provisioned Device",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"entity_name\": \"urn:ngsi-ld:Thing:bell002\"\n}"
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/devices/bell002",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"devices",
+								"bell002"
+							]
+						},
+						"description": "This example updates an existing provisioned device by making a PUT request to the `/iot/devices/<device-id>` endpoint."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Provisioned Device",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "openiot"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{iot-agent}}/iot/devices/bell002",
+							"protocol": "http",
+							"host": [
+								"{{iot-agent}}"
+							],
+							"path": [
+								"iot",
+								"devices",
+								"bell002"
+							]
+						},
+						"description": "This example removes a provisioned device by making a DELETE request to the `/iot/services/<device-id>` endpoint.\n\nThe device attributes will no longer be mapped and commands can no longer be sent to the device.\nIf the device is making active measurements, they will still be handled with default values\nif the associated service has not been deleted."
+					},
+					"response": []
+				}
+			],
+			"description": "The **CRUD** operations for an individual device map on to the expected HTTP verbs under the `/iot/devices` endpoint\n\n* **Create** - HTTP POST\n* **Read** - HTTP GET\n* **Update** - HTTP PUT\n* **Delete** - HTTP DELETE\n\nUse the `<device-id>` to uniquely identify a device.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
